@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+    environment:
+      IRC_SERVER: irc.hackint.org
+      IRC_CHANNELS: "#katia2"
+      REDIS_URL: redis://redis:6379/0
+  redis:
+    image: valkey/valkey

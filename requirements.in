@@ -1,0 +1,6 @@
+fastapi>=0.110.0
+uvicorn>=0.37.0
+redis>=6.4.0
+irctokens>=2.0.2
+PyJWT
+python-jose[cryptography]
